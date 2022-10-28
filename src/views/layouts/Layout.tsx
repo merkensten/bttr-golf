@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../../utils/firebase';
+import { useNavigate } from 'react-router-dom';
 
 // components
 import { Navbar, Footer } from '../../components';
@@ -8,14 +11,11 @@ type Props = {
 };
 
 export function Layout({ children }: Props) {
-  const user = true;
-
   return (
     <>
-      {user && <Navbar />}
+      <Navbar />
       <main>{children}</main>
-
-      {user && <Footer />}
+      <Footer />
     </>
   );
 }

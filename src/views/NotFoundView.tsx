@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout } from './layouts/Layout';
+import { UserAuth } from '../context/AuthContext';
 
 type Props = {
   children: React.ReactNode;
@@ -7,6 +8,7 @@ type Props = {
 };
 
 function NotFoundWrapper({ children, cssClasses }: Props) {
+  const { user } = UserAuth();
   return (
     <div
       className={`${cssClasses}bg-white px-4 sm:px-6 md:grid md:place-items-center lg:px-8`}
@@ -39,7 +41,7 @@ export function NotFoundView() {
   if (user) {
     return (
       <Layout>
-        <NotFoundWrapper cssClasses='py-16 sm:py-36'>
+        <NotFoundWrapper cssClasses="py-16 sm:py-36">
           <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
             <a href="/app" className="btn">
               Till appsidan
@@ -51,7 +53,7 @@ export function NotFoundView() {
   }
 
   return (
-    <NotFoundWrapper cssClasses='mt-[200px] lg:mt-[500px]'>
+    <NotFoundWrapper cssClasses="mt-[200px] lg:mt-[500px]">
       <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
         <a href="/" className="btn">
           Till startsidan

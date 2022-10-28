@@ -1,10 +1,4 @@
 import React from 'react';
-// import type { RootState } from '../../redux/store';
-// import { useSelector, useDispatch } from 'react-redux';
-// import {
-//   decrement,
-//   increment,
-// } from '../../redux/features/counter/counterSlice';
 import LoginForm from './components/LoginForm';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../utils/firebase';
@@ -29,7 +23,7 @@ export function HomeView() {
   }, [user]);
   return (
     <main className="">
-      <LoginForm user={user} />
+      <LoginForm />
     </main>
   );
 }
