@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginForm from './components/LoginForm';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../../utils/firebase';
+import { auth } from '../../config/firebase';
 import { useNavigate } from 'react-router-dom';
 
 export function HomeView() {

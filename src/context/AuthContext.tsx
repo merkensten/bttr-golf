@@ -5,7 +5,7 @@ import {
   signOut,
   onAuthStateChanged,
 } from 'firebase/auth';
-import { auth } from '../utils/firebase';
+import { auth } from '../config/firebase';
 
 const UserContext = React.createContext<any>(null);
 

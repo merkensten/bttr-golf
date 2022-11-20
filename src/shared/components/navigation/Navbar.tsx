@@ -2,7 +2,7 @@ import React from 'react';
 import { signOut } from 'firebase/auth';
 // import { auth, logout } from '../../utils/firebase';
 import { useNavigate } from 'react-router-dom';
-import { UserAuth } from '../../context/AuthContext';
+import { UserAuth } from '../../../context/AuthContext';
 
 export function Navbar() {
   const navigate = useNavigate();
